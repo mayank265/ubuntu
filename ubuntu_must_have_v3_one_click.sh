@@ -14,14 +14,10 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 
 
 sudo apt update
-
-sudo apt install -y ./google-chrome-stable_current_amd64.deb
-sudo apt install -y  software-properties-common apt-transport-https wget
-sudo apt install  -y code
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo apt install -y microsoft-edge-dev
 
-sudo apt-get install  -y sublime-text
+sudo apt install -y ./google-chrome-stable_current_amd64.deb code software-properties-common apt-transport-https wget microsoft-edge-dev sublime-text
+#sudo apt install -y  
 sudo snap install pycharm-community --classic
 
 mkdir ~/anaconda3 
