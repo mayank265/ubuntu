@@ -19,6 +19,7 @@ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo apt install -y ./google-chrome-stable_current_amd64.deb code software-properties-common apt-transport-https wget microsoft-edge-dev sublime-text
 #sudo apt install -y  
 sudo snap install pycharm-community --classic
+sudo snap install wps-2019-snap
 
 mkdir ~/anaconda3 
 bash -b -f -p ~/anaconda3 Anaconda3-2020.02-Linux-x86_64.sh
