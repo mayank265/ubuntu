@@ -24,7 +24,10 @@ sudo snap install wps-2019-snap
 mkdir ~/anaconda3 
 bash -b -f -p ~/anaconda3 Anaconda3-2020.02-Linux-x86_64.sh
 
-sudo apt-get --ignore-missing install -y build-essential gcc g++ make perl dkms arj artha gimp xclip tree atop bmon cabextract cheese chromium-browser aptitude codeblocks cups-pdf djview dos2unix file-roller filezilla fort77 g++ gcc gdb gdebi geany gftp gimp git-all gnuplot gparted gummi hardinfo htop imagemagick inkscape kile lyx meld mpack nemo nemo-fileroller okular openssh-client openssh-server p7zip-full p7zip-rar pdfshuffler default-jdk pidgin rar r-cran-vgam sharutils ssh     tree unace unrar unzip uudeview vim vlc xfburn xfig youtube-dl zip --fix-missing
+sudo apt-get --ignore-missing install -y build-essential gcc g++ make libarchive-any-perl libfile-basedir-perl libfile-find-rule-perl unrar ncdu perl dkms arj artha gimp xclip tree atop bmon cabextract cheese chromium-browser aptitude codeblocks cups-pdf djview dos2unix file-roller filezilla fort77 g++ gcc gdb gdebi geany gftp gimp git-all gnuplot gparted gummi hardinfo htop imagemagick inkscape kile lyx meld mpack nemo nemo-fileroller okular openssh-client openssh-server p7zip-full p7zip-rar pdfshuffler default-jdk pidgin rar r-cran-vgam sharutils ssh     tree unace unrar unzip uudeview vim vlc xfburn xfig youtube-dl zip --fix-missing
 
 date >> start_end.txt
 cat start_end.txt  
+
+
+
