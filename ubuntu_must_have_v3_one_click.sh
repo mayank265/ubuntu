@@ -24,21 +24,21 @@ sudo snap install wps-2019-snap
 mkdir ~/anaconda3
 bash -b -f -p ~/anaconda3 Anaconda3-2020.02-Linux-x86_64.sh
 
-sudo apt-get --ignore-missing install -y build-essential gcc g++ libarchive-any-perl libfile-basedir-perl libfile-find-rule-perl unrar ncdu make ncdu perl dkms arj artha gimp xclip tree atop bmon cabextract cheese chromium-browser aptitude codeblocks cups-pdf djview dos2unix file-roller filezilla fort77 g++ gcc gdb gdebi geany gftp gimp git-all gnuplot gparted gummi hardinfo htop imagemagick inkscape kile lyx meld mpack nemo nemo-fileroller okular openssh-client openssh-server p7zip-full p7zip-rar pdfshuffler default-jdk pidgin rar r-cran-vgam sharutils ssh texlive-full texstudio tree unace unrar unzip uudeview vim vlc xfburn xfig youtube-dl php libapache2-mod-php php-mysql php-curl php-json php-cgi php-curl php-gd php-mbstring php-xml php-xmlrpc zip net-tools virtualbox wireshark build-essential libssl-dev libffi-dev cowsay curl feh goo hping3 ifupdown inetutils-traceroute mlocate mysql-server tcpdump nmap virtualbox wireshark net-tools ndisc6 neovim netdiscover traceroute nmap nodejs npm pacman pip python3-pip python3-pip python3 python3-scapy python3-venv rpm scapy tcpdump traceroute virtualbox-ext-pack whois wireshark wireshark-qt virtualbox python3-pip build-essential gdb build-essential libssl-dev libffi-dev filezilla fish kitty net-tools openssh-server pacman plank python3-matplotlib phpmyadmin sshpass tcpdump traceroute ettercap-graphical mlocate neovim openvpn screen speedtest-cli traceroute transmission-cli transmission-daemon vsftpd w3m nodejs ca-certificates --fix-missing
+sudo apt-get --ignore-missing install -y build-essential gcc g++ libarchive-any-perl libfile-basedir-perl libfile-find-rule-perl unrar ncdu make ncdu perl dkms arj artha gimp xclip tree atop bmon cabextract cheese chromium-browser aptitude codeblocks cups-pdf djview dos2unix file-roller filezilla fort77 g++ gcc gdb gdebi geany gftp gimp git-all gnuplot gparted gummi hardinfo htop imagemagick inkscape kile lyx meld mpack nemo nemo-fileroller okular openssh-client openssh-server p7zip-full p7zip-rar default-jdk pidgin rar r-cran-vgam sharutils ssh texlive-full texstudio tree unace unrar unzip uudeview vim vlc xfburn xfig youtube-dl php libapache2-mod-php php-mysql php-curl php-json php-cgi php-curl php-gd php-mbstring php-xml php-xmlrpc zip net-tools virtualbox wireshark build-essential libssl-dev libffi-dev cowsay curl feh goo hping3 ifupdown inetutils-traceroute mlocate mysql-server tcpdump nmap virtualbox wireshark net-tools ndisc6 neovim netdiscover traceroute nmap nodejs npm pacman pip python3-pip python3-pip python3 python3-scapy python3-venv rpm scapy tcpdump traceroute virtualbox-ext-pack whois wireshark wireshark-qt virtualbox python3-pip build-essential gdb build-essential libssl-dev libffi-dev filezilla fish kitty net-tools openssh-server pacman plank python3-matplotlib phpmyadmin sshpass tcpdump traceroute ettercap-graphical mlocate neovim openvpn screen speedtest-cli traceroute transmission-cli transmission-daemon vsftpd w3m nodejs ca-certificates --fix-missing
 
 #####################
 # Auxiliary Methods #
 #####################
 function executeStep () {
-    BBlue='\033[1;34m'
-    BYellow='\033[1;33m'
-    Green='\033[0;32m'
-    Cyan='\033[0;36m'
-    Color_Off='\033[0m'
-    echo -e "${Cyan}STEP: $2"
-    echo -e "${BYellow}Executing: ${Green} $1 ${Color_Off}"
-    eval $1
-    echo -e "${BBlue}Completed: ${Green} $1 ${Color_Off}"
+BBlue='\033[1;34m'
+BYellow='\033[1;33m'
+Green='\033[0;32m'
+Cyan='\033[0;36m'
+Color_Off='\033[0m'
+echo -e "${Cyan}STEP: $2"
+echo -e "${BYellow}Executing: ${Green} $1 ${Color_Off}"
+eval $1
+echo -e "${BBlue}Completed: ${Green} $1 ${Color_Off}"
 }
 
 
@@ -79,10 +79,10 @@ executeStep 'ufw allow ssh' 'Allow SSH through Firewall'
 executeStep 'cp /etc/ssh/sshd_config /etc/ssh/sshd_config.backup' 'Backup SSH Config'
 
 # if PermitRootLogin is commented, uncomment
-executeStep 'sed -i  "s/#PermitRootLogin/PermitRootLogin/" /etc/ssh/sshd_config' 'Disable ROOT SSH login #1'
+executeStep 'sed -i "s/#PermitRootLogin/PermitRootLogin/" /etc/ssh/sshd_config' 'Disable ROOT SSH login #1'
 
 # if PermitRootLogin is yes, set it to no
-executeStep 'sed -i  "s/PermitRootLogin yes/PermitRootLogin no/" /etc/ssh/sshd_config' 'Disable ROOT SSH login #2'
+executeStep 'sed -i "s/PermitRootLogin yes/PermitRootLogin no/" /etc/ssh/sshd_config' 'Disable ROOT SSH login #2'
 
 # restart ssh service
 executeStep 'systemctl restart ssh' 'Restart SSH Service'
