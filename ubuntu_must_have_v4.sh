@@ -11,8 +11,8 @@ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
 
-sudo apt-get --ignore-missing install -y mysql-server wireshark tcpdump virtualbox-ext-pack virtualbox
-sudo apt-get --ignore-missing install -y build-essential gcc g++ php libapache2-mod-php php-mysql php-curl php-json php-cgi php-curl php-gd php-mbstring php-xml php-xmlrpc phpmyadmin
+sudo apt-get --ignore-missing install -y mysql-server wireshark tcpdump virtualbox-ext-pack virtualbox phpmyadmin
+sudo apt-get --ignore-missing install -y build-essential gcc g++ php libapache2-mod-php php-mysql php-curl php-json php-cgi php-curl php-gd php-mbstring php-xml php-xmlrpc 
 
 wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
 mkdir ~/anaconda3
