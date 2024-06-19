@@ -6,6 +6,10 @@ sudo apt-get --ignore-missing install -y build-essential gcc g++ php libapache2-
 
 sudo apt-get --ignore-missing install -y curl
 wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
+mkdir ~/anaconda3
+bash -b -f -p ~/anaconda3 Anaconda3-2024.02-1-Linux-x86_64.sh
+
+
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
@@ -18,8 +22,7 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 
 sudo apt update
 
-mkdir ~/anaconda3
-bash -b -f -p ~/anaconda3 Anaconda3-2024.02-1-Linux-x86_64.sh
+
 
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 
