@@ -1,6 +1,6 @@
 date >> start_end.txt
 sudo apt-get update
-sudo apt install -y wget curl 
+sudo apt install -y wget curl
 
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
@@ -11,8 +11,8 @@ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
 
-sudo apt-get --ignore-missing install -y mysql-server wireshark tcpdump  phpmyadmin
-sudo apt-get --ignore-missing install -y build-essential gcc g++ php libapache2-mod-php php-mysql php-curl php-json php-cgi php-curl php-gd php-mbstring php-xml php-xmlrpc 
+sudo apt-get --ignore-missing install -y mysql-server wireshark tcpdump phpmyadmin
+sudo apt-get --ignore-missing install -y build-essential gcc g++ php libapache2-mod-php php-mysql php-curl php-json php-cgi php-curl php-gd php-mbstring php-xml php-xmlrpc
 
 wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
 mkdir ~/anaconda3
@@ -24,7 +24,8 @@ sudo apt update
 
 sudo apt install -y ./google-chrome-stable_current_amd64.deb code software-properties-common apt-transport-https microsoft-edge-dev sublime-text
 
-sudo apt-get --ignore-missing install -y copyq  conky-all  geany atril flameshot virtualbox-ext-pack virtualbox libarchive-any-perl libfile-basedir-perl libfile-find-rule-perl unrar ncdu make ncdu perl dkms arj artha gimp xclip tree atop bmon cabextract cheese chromium-browser aptitude codeblocks cups-pdf djview dos2unix file-roller filezilla fort77 g++ gcc gdb gdebi geany gftp gimp git-all gnuplot gparted gummi hardinfo htop imagemagick inkscape kile lyx meld mpack nemo nemo-fileroller okular openssh-client openssh-server p7zip-full p7zip-rar default-jdk pidgin rar r-cran-vgam sharutils ssh tree unace unrar unzip uudeview vim vlc xfburn xfig youtube-dl zip net-tools  build-essential libssl-dev libffi-dev cowsay curl feh goo hping3 ifupdown inetutils-traceroute mlocate nmap  wireshark terminator net-tools ndisc6 neovim netdiscover traceroute nmap nodejs npm pacman pip python3-pip python3-pip python3 python3-scapy python3-venv rpm scapy tcpdump traceroute  whois wireshark wireshark-qt  python3-pip build-essential gdb build-essential libssl-dev libffi-dev filezilla fish kitty net-tools openssh-server pacman plank python3-matplotlib sshpass traceroute ettercap-graphical unity-tweak-tool mlocate neovim openvpn screen speedtest-cli traceroute transmission-cli transmission-daemon vsftpd w3m nodejs ca-certificates --fix-missing
+sudo apt-get --ignore-missing install -y copyq conky-all geany atril flameshot virtualbox-ext-pack virtualbox
+libarchive-any-perl libfile-basedir-perl libfile-find-rule-perl unrar ncdu make ncdu perl dkms arj artha gimp xclip tree atop bmon cabextract cheese chromium-browser aptitude codeblocks cups-pdf djview dos2unix file-roller filezilla fort77 g++ gcc gdb gdebi geany gftp gimp git-all gnuplot gparted gummi hardinfo htop imagemagick inkscape kile lyx meld mpack nemo nemo-fileroller okular openssh-client openssh-server p7zip-full p7zip-rar default-jdk pidgin rar r-cran-vgam sharutils ssh tree unace unrar unzip uudeview vim vlc xfburn xfig youtube-dl zip net-tools build-essential libssl-dev libffi-dev cowsay curl feh goo hping3 ifupdown inetutils-traceroute mlocate nmap wireshark terminator net-tools ndisc6 neovim netdiscover traceroute nmap nodejs npm pacman pip python3-pip python3-pip python3 python3-scapy python3-venv rpm scapy tcpdump traceroute whois wireshark wireshark-qt python3-pip build-essential gdb build-essential libssl-dev libffi-dev filezilla fish kitty net-tools openssh-server pacman plank python3-matplotlib sshpass traceroute ettercap-graphical unity-tweak-tool mlocate neovim openvpn screen speedtest-cli traceroute transmission-cli transmission-daemon vsftpd w3m nodejs ca-certificates --fix-missing
 
 sudo snap install pycharm-community --classic
 sudo snap install wps-2019-snap
