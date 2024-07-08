@@ -1,4 +1,6 @@
+
 date >> start_end.txt
+df -h >> usage.txt 
 sudo apt-get update
 sudo apt install -y wget curl
 
@@ -15,8 +17,8 @@ sudo apt-get --ignore-missing install -y mysql-server wireshark phpmyadmin virtu
 sudo apt-get --ignore-missing install -y build-essential tcpdump gcc g++ php libapache2-mod-php php-mysql php-curl php-json php-cgi php-curl php-gd php-mbstring php-xml php-xmlrpc
 
 wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
-mkdir ~/anaconda3
-bash -b -f -p ~/anaconda3 Anaconda3-2024.02-1-Linux-x86_64.sh
+mkdir $HOME/anaconda3 
+bash Anaconda3-2024.02-1-Linux-x86_64.sh -b -p $HOME/anaconda3 
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
@@ -30,6 +32,7 @@ sudo snap install pycharm-community --classic
 sudo snap install wps-2019-snap
 sudo apt-get --ignore-missing install -y texlive-full texstudio
 
+df -h >> usage.txt 
 date >> start_end.txt
 cat start_end.txt
 
